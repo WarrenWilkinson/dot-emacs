@@ -17,6 +17,9 @@ Then install these versions:
     git clone https://github.com/WarrenWilkinson/dot-emacs.git
     mv dot-emacs .emacs.d
     ln -s .emacs.d/.emacs .emacs
+    cd ~/.emacs.d
+    git submodule init
+    git submodule update
 
 Local Customizations
 --------------------
