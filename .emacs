@@ -89,8 +89,7 @@
           (lambda ()
             (local-set-key "\C-cr" 'org-todo)
 	    (local-set-key "\C-cc" 'org-capture)
-	    (local-set-key "\C-ca" 'org-agenda)
-	    (local-set-key "\C-cb" 'org-iswitchb)))
+	    (local-set-key "\C-ca" 'org-agenda)))
 
 (setq org-ditaa-jar-path "/usr/share/ditaa-bin/lib/ditaa.jar")
 

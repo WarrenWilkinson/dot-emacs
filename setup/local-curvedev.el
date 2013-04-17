@@ -88,6 +88,12 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Startup File
 
+(setq org-todo-keywords
+       '((sequence "TODO(t)" "WAIT(w)" "REVU(r@/!)" "CUST(c!)" "INQA(q!)" "|" "DONE(d!)" "MERG(m!)" "QUIT(Q@/!)")))
+
+(setq org-todo-keyword-faces '(("TODO" :foreground "red" :weight bold)))
+
+
 (set-default-font "Terminus 8")
 (setq org-agenda-files (list "~/work.org"))
 (find-file "~/work.org")
