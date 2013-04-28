@@ -208,4 +208,10 @@
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Load Local Setup
 
-(load (concat "~/.emacs.d/setup/local-" system-name ".el"))
+(let ((system+user-file (concat "~/.emacs.d/setup/local-" system-name "-" user-login-name ".el"))
+      (system-file (concat "~/.emacs.d/setup/local-" system-name ".el")))
+  (if (file-exists-p system+user-file)
+      (load system+user-file)
+    (if (file-exists-p system-file)
+	(load system-file)
+      (warn "No configuration file found. Checked %s and %s." system+user-file system-file))))
